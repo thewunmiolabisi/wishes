@@ -1,0 +1,69 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.container {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px; 
+  box-shadow: 0 0 10px rgba(204, 167, 167, 0.1);
+  background-image: url(https://images.unsplash.com/photo-1513151233558-d860c5398176?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YmlydGhkYXl8ZW58MHx8MHx8fDA%3D);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+h1 {
+  text-align: center;
+  color: #333; 
+}
+
+.poem p {
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 10px;
+  opacity: 0;
+  text-align: center;
+}
+
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+.poem p {
+  animation: fadeIn 0.5s ease forwards;
+  animation-delay: 0.5s;
+}
+
+
+.poem p:nth-child(2) {
+  animation-delay: 1.5s;
+}
+
+.poem p:nth-child(3) {
+  animation-delay: 2.5s;
+}
+@media (max-width: 600px) {
+  .container {
+      padding: 10px;
+      
+  }
+  .poem p {
+      font-size: 14px; 
+}
+}
